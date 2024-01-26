@@ -3,7 +3,7 @@ import * as XLSX from 'xlsx';
 
 const readExcelFile = async () => {
   try{
-    const response = await fetch('/src/assets/test1_comparision.xlsx');
+    const response = await fetch('/assets/test1_comparision.xlsx');
     const arrayBuffer = await response.arrayBuffer();
     const data = new Uint8Array(arrayBuffer);
   
