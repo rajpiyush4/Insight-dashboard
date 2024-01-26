@@ -1,4 +1,3 @@
-import ExcelData from "../Graph/ExcelData"
 import readExcelFile from "../lib/readSheet"
 import { useState, useEffect } from "react"
 

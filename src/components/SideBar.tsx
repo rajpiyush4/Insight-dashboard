@@ -37,7 +37,7 @@ function SideBar({ isShow }: { isShow: boolean }) {
   const location = useLocation();
 
   return (
-    <aside className={`${isShow ? 'w-[5%]' : 'w-[20%]'} min-w-[70px] bg-[#f6f8fc] h-[100vh] duration-75`}>
+    <aside className={`${isShow ? 'w-[5%]' : 'w-[20%]'} min-w-[70px] bg-[#f6f8fc] h-[100vh] duration-75 border`}>
       <ul>
         {routes.map((item, key) => <li
           className={`mb-8 p-4 rounded-md ${handlePath(location.pathname) == item.name && 'bg-black text-white'}`}

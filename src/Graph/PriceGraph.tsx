@@ -5,7 +5,8 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend
+  Legend,
+  Label
 } from "recharts";
 import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../Context/DataProvider";
@@ -16,8 +17,8 @@ export default function PriceGraph({ category }: { category: string | undefined 
   const [finalData, setFinalData] = useState([{}]);
 
   useEffect(() => {
-    const prices = getIndexOfFeature('Pricing', chartData) || [];
-    const vendors = getIndexOfFeature('vendor', chartData) || [];
+    const prices = getIndexOfFeature('Pricing', chartData)
+    const vendors = getIndexOfFeature('vendor', chartData)
 
     const data = prices?.slice(1).map((price, index) => ({
       name: vendors[index + 1] || 'vendors',
@@ -31,18 +32,20 @@ export default function PriceGraph({ category }: { category: string | undefined 
   return (
     <>
       {category && <BarChart
-      className="shadow-md border p-4"
+        className="shadow-md border p-4"
         width={700}
         height={300}
         data={finalData}
-        
+
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
-        <YAxis />
+        <YAxis>
+          <Label value="price ($)" angle={-90} position="insideLeft" offset={-5} />
+        </YAxis>
         <Tooltip />
         <Legend />
-        <Bar dataKey="price" fill="orange" />
+        <Bar dataKey="price" fill="#212121" />
       </BarChart>}
     </>
   );

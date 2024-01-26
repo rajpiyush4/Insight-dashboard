@@ -43,9 +43,9 @@ export const sheetDataLevel = [
     },
 ]
 
-export function getIndexOfFeature(feature:string, data: (string | number)[][] | undefined) {
+export function getIndexOfFeature(feature:string, data: (string)[][] | undefined):string[] {
     if(!data){
-        return undefined
+        return []
     }
     for(let i=0; i<data.length; i++){
         //@ts-ignore
@@ -53,5 +53,6 @@ export function getIndexOfFeature(feature:string, data: (string | number)[][] | 
             return data[i];
         }
     }
+    return []
 
 }

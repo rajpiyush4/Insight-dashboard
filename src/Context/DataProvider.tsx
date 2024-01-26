@@ -5,14 +5,14 @@ import readExcelFile from '../lib/readSheet'
 type ComponentProps = {
 children : React.ReactNode
 }
-export const DataContext = createContext<(string | number)[][] | undefined>(undefined)
+export const DataContext = createContext<(string)[][] | undefined>(undefined)
 
 function DataProvider({children} : ComponentProps) {
-    const [data, setData] = useState<(number | string)[][] | undefined>()
+    const [data, setData] = useState<(string)[][] | undefined>()
   
     async function getExcelData() {
       try {
-        const res = await readExcelFile() as (string | number)[][] | undefined
+        const res = await readExcelFile() as (string)[][] | undefined
         console.log("res", res)
         setData(res)
   

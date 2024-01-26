@@ -34,8 +34,14 @@
 }
 
 .recharts-legend-wrapper{
-  width: 50px !important;
-  position: relative;
+  margin: auto;
+  display: block;
+  width: fit-content !important;
+  position: relative !important;
+  text-align: center;
+}
+.recharts-legend-wrapper ul{
+  display: flex;
 }
 
 @keyframes logo-spin {
