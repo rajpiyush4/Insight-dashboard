@@ -43,14 +43,19 @@ export const sheetDataLevel = [
     },
 ]
 
-export function getIndexOfFeature(feature:string, data: (string)[][] | undefined):string[] {
-    if(!data){
+export function getIndexOfFeature(feature: string, data: (string)[][] | undefined): string[] {
+    if (!data) {
         return []
     }
-    for(let i=0; i<data.length; i++){
-        //@ts-ignore
-        if(data[i][0].toLowerCase().trim() == feature.toLowerCase().trim()){
-            return data[i];
+    const lowercaseFeature = feature.toLowerCase().trim();
+
+    for (let i = 0; i < data.length; i++) {
+        if (data[i][0]) {
+            const lowercaseHeader = data[i][0].toLowerCase().trim();
+
+            if (lowercaseHeader === lowercaseFeature) {
+                return data[i];
+            }
         }
     }
     return []

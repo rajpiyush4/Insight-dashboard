@@ -1,10 +1,7 @@
 import { useState, useContext } from "react"
-import PriceGraph from "../Graph/PriceGraph"
+import { CertificationChart, CompatibilityChart, MetricsTrackedChart, PriceGraph, SizeWeightChart} from '../Graph/index'
 import { DataContext } from "../Context/DataProvider"
-import MetricsTrackedChart from "../Graph/MatricsTrackedChart"
-import SizeWeightChart from "../Graph/SizeWeightChart"
-import CompatibilityChart from "../Graph/CompatibilityChart"
-import CertificationChart from "../Graph/CertificationChart"
+
 
 
 function Dashboard({ isShow }: { isShow: boolean }) {

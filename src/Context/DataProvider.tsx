@@ -13,7 +13,6 @@ function DataProvider({children} : ComponentProps) {
     async function getExcelData() {
       try {
         const res = await readExcelFile() as (string)[][] | undefined
-        console.log("res", res)
         setData(res)
   
       } catch (err) {
