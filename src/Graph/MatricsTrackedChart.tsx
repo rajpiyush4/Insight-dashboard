@@ -36,7 +36,7 @@ const MetricsTrackedChart = ({category}:{category: string | undefined}) => {
       <Tooltip />
       <Legend />
       {Object.keys(metricsData[0] || {}).map((metric, index) => (
-        <Bar key={index} dataKey={metric} stackId="a" fill={`#${(5 - index).toString(16).repeat(6)}`} />
+        <Bar key={index} dataKey={metric} stackId="a" fill={`#${Math.floor(Math.random()*16777215).toString(16)}`} />
       ))}
     </BarChart>
 

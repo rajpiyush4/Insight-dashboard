@@ -39,6 +39,7 @@
   width: fit-content !important;
   position: relative !important;
   text-align: center;
+  bottom: 1rem !important;
 }
 .recharts-legend-wrapper ul{
   display: flex;

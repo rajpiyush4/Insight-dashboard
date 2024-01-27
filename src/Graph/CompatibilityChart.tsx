@@ -47,8 +47,8 @@ const CompatibilityChart = ({category}:{category: string|undefined}) => {
         <Tooltip />
         <Legend />
         <ReferenceLine y={0} stroke="#000" />
-        <Bar dataKey="androidCompatible" fill="#212121" />
-        <Bar dataKey="iOSCompatible" fill="grey" />
+        <Bar dataKey="androidCompatible" fill="#e63946" />
+        <Bar dataKey="iOSCompatible" fill="5e548e" />
       </BarChart>
       }
     </>

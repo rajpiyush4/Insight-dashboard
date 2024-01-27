@@ -8,11 +8,11 @@ interface HeadersProps {
 
 function Headers({setIsShow} : HeadersProps) {
   return (
-    <header className='p-4 bg-[#f6f8fc] border'>
+    <header className='p-4 bg-white shadow-md '>
         <div className='flex items-center gap-2'>
-          <button className='rounded-full w-[50px] h-[50px] grid place-content-center' onClick={()=>setIsShow((s)=>!s)}><Menu size={20} /></button>
+          <button className='rounded-full bg-[whitesmoke] w-[50px] h-[50px] grid place-content-center shadow-custom' onClick={()=>setIsShow((s)=>!s)}><Menu color='#003049' size={20} /></button>
             <BarChart2  />
-            <span className='font-bold text-lg'>Insight</span>
+            <span className='font-bold text-xl'>Insight</span>
         </div>
     </header>
   )

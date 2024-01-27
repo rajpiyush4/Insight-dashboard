@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 function Vendors({isShow}:{isShow:boolean}) {
   const [data, setData] = useState<any>()
 
-
   async function getExcelData() {
     try {
       const res = await readExcelFile()

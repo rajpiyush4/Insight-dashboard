@@ -33,10 +33,15 @@ export default function PriceGraph({ category }: { category: string | undefined 
     <>
       {category && <BarChart
         className="shadow-md border p-4"
-        width={700}
+        width={500}
         height={300}
         data={finalData}
-
+        margin={{
+          top: 5,
+          right: 30,
+          left: 20,
+          bottom: 5
+        }}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
@@ -45,7 +50,7 @@ export default function PriceGraph({ category }: { category: string | undefined 
         </YAxis>
         <Tooltip />
         <Legend />
-        <Bar dataKey="price" fill="#212121" />
+        <Bar dataKey="price" fill="#fb8500" />
       </BarChart>}
     </>
   );

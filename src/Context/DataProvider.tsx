@@ -14,6 +14,11 @@ function DataProvider({children} : ComponentProps) {
       try {
         const res = await readExcelFile() as (string)[][] | undefined
         setData(res)
+
+        // const transposeData = (data: (string)[][]) => {
+        //   return data[0].map((_, columnIndex) => {
+        //     return data.map(row => row[columnIndex])});
+        // };
   
       } catch (err) {
         console.log(err, 'error in fetch data')

@@ -25,8 +25,31 @@
 
 html {
   font-size: 14px;
-  font-family: monospace !important;
+  font-family: sans-serif !important;
 }
+
+
+.shadow-custom{
+  transition: .3s;
+}
+
+.shadow-custom:hover{
+  transform: translate(-4px , -4px);
+  box-shadow: 5px 5px 0 black;
+}
+.shadow-static-custom{
+  transform: translate(-4px , -4px);
+  box-shadow: 5px 5px 0 black;
+}
+.shadow-custom-1{
+  transform: translate(-4px , -4px);
+  box-shadow: 5px 5px 0 black;
+}
+.shadow-custom-1:hover{
+  transform: translate(0 , 0px);
+  box-shadow: none;
+}
+
 
 a {
   font-weight: 500;
@@ -35,7 +58,7 @@ a {
 
 body {
   width: 100%;
-  background: linear-gradient(45deg, #f9f9f9 0%, #f1f1f1 100%);
+  background: hsl(195deg 16.67% 95.29%);
 }
 
 h1 {
@@ -52,16 +75,14 @@ button {
   background-color: #eee;
   cursor: pointer;
   transition: border-color 0.25s;
+  outline: none;
 }
 
-button:hover {
-  border-color: #646cff;
-}
 
-button:focus,
+/* button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  outline: 4px auto black;
+} */
 
 @media (prefers-color-scheme: light) {
   :root {

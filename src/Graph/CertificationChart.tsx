@@ -47,8 +47,8 @@ const CertificationChart = ({ category }: { category: string | undefined }) => {
             <Tooltip />
             <Legend />
             <ReferenceLine y={0} stroke="#000" />
-            <Bar dataKey="fdaApproval" fill="#121212" />
-            <Bar dataKey="ceCertification" fill="grey" />
+            <Bar dataKey="fdaApproval" fill="#390099" />
+            <Bar dataKey="ceCertification" fill="##99582a" />
           </BarChart>
 
       }
